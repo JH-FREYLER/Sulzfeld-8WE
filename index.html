@@ -99,7 +99,7 @@ tr.sum td{font-weight:700;border-top:2px solid #CFD5D5;padding-top:12px;border-b
     <h1 style="flex:1">Break-even Kalkulator — 8 WE Sulzfeld</h1>
     <button class="reset-btn" id="resetBtn" onclick="resetManual()">✕ Manuelle BK zurücksetzen</button>
   </div>
-  <div class="subtitle">Goethestr. 39/41 | 753 m² Wfl | 1.000 m² BGF | 8 WE | 14 Garagen + 2 Stellplätze<br>Schieberegler und Werte anpassen — alle Ergebnisse rechnen sofort neu</div>
+  <div class="subtitle">Goethestr. 39/41 | 753 m² Wfl | 1.530 m² BGF | 8 WE | 14 Garagen + 2 Stellplätze<br>Schieberegler und Werte anpassen — alle Ergebnisse rechnen sofort neu</div>
 
   <div class="sec">Verkaufspreis</div>
   <div class="slider-row">
@@ -152,8 +152,8 @@ tr.sum td{font-weight:700;border-top:2px solid #CFD5D5;padding-top:12px;border-b
 const F=v=>(v<0?'−':'')+Math.abs(Math.round(v)).toLocaleString('de-DE');
 const F2=v=>(v<0?'−':'+')+Math.abs(Math.round(v)).toLocaleString('de-DE');
 
-const WFL=753,BGF=1000,NW=8,GAR=14,STL=2,PG=25000,PS=14000;
-const GRUND=605884,IST_RBK=2537300,IST_BNK_P=145000,IST_BNK_PZ=0.04;
+const WFL=753,BGF=1530,NW=8,GAR=14,STL=2,PG=25000,PS=14000;
+const GRUND=605884,IST_RBK=3882210,IST_BNK_P=145000,IST_BNK_PZ=0.04;
 const IST_VP=0.03,IST_WERB=25000,IST_ZF_BAU=0.0175,IST_ZF_GRUND=54530;
 const BUERG=0.001125,RISK=0.02;
 
@@ -169,7 +169,7 @@ const WGS=[
 ];
 
 const EPS=[
-  {id:'ep1',nm:'Wohnungsbau auf 1.600 EUR/m² BGF',desc:'IST 1.900 → Ziel 1.600 × 1.000 m²',val:-300000,risk:'mittel',rc:'risk-y',cat:'bk'},
+  {id:'ep1',nm:'Wohnungsbau auf 1.600 EUR/m² BGF',desc:'IST 1.900 → Ziel 1.600 × 1.530 m²',val:-459000,risk:'mittel',rc:'risk-y',cat:'bk'},
   {id:'ep2',nm:'Außenanlagen Minimalstandard',desc:'IST 50.700 → Ziel 30.000',val:-20700,risk:'gering',rc:'risk-g',cat:'bk'},
   {id:'ep3',nm:'Projektsteuerung intern',desc:'Eigenleistung statt extern',val:-80000,risk:'gering',rc:'risk-g',cat:'bnk'},
   {id:'ep4',nm:'Architekt LPH 5 teilw. intern',desc:'Teilweise Eigenplanung',val:-25000,risk:'mittel',rc:'risk-y',cat:'bnk'},
